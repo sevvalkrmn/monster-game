@@ -4,6 +4,15 @@ public class Monster {
     private int health;
     private String type;
 
+    public Monster(int health, String type) {
+        setHealth(health);
+        this.type = type;
+    }
+
+    public Monster(int health) {
+        setHealth(health);
+    }
+
     public String getType() {
         return type;
     }

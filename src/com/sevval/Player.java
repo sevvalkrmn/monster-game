@@ -5,6 +5,12 @@ public class Player {
     private String name;
     private int age;
 
+    public Player(String name, int health, int age) {
+        this.name = name;
+        setHealth(health);
+        setAge(age);
+    }
+
     public int getAge() {
         return age;
     }
