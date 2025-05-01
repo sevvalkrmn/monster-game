@@ -1,6 +1,10 @@
 package com.sevval;
 
 import java.util.Scanner;
+import model.Player;
+import model.Monster;
+
+
 
 public class Game {
     public static final int FULL_HEALTH = 100;
@@ -51,11 +55,11 @@ public class Game {
     private void buildPlayer(){
         String name = askName();
         int age = askAge();
-        player = new Player(name, FULL_HEALTH, age);
+        player = new Player(name, age);
     } 
 
     private void buildMonster(){
-        monster = new Monster(FULL_HEALTH , "Fatmik");
+        monster = new Monster( "Fatmik");
     }
 
     private String askName(){

@@ -1,20 +1,11 @@
-package com.sevval;
+package model;
+import com.sevval.Game;
 
-public class Monster {
+public class GameElement {
     private int health;
-    private String type;
 
-    public Monster(int health, String type) {
-        setHealth(health);
-        this.type = type;
-    }
-
-    public Monster(int health) {
-        setHealth(health);
-    }
-
-    public String getType() {
-        return type;
+    public GameElement(){
+        setHealth(Game.FULL_HEALTH);
     }
 
     private void setHealth(int health) {
@@ -39,4 +30,5 @@ public class Monster {
     public boolean isALive(){
         return health > 0;
     }
+
 }
