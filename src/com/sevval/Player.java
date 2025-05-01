@@ -15,7 +15,7 @@ public class Player {
         return age;
     }
 
-    public void setAge(int age) {
+    private void setAge(int age) {
         if (age < 10) {
             throw new IllegalArgumentException("Age must be at least 10");
         }
@@ -30,7 +30,7 @@ public class Player {
         this.name = name;
     }
 
-    public void setHealth(int health) {
+    private void setHealth(int health) {
         if (health > 100 || health < 0) {
             throw new IllegalArgumentException("Health must be between 0 and 100");
         }
@@ -47,5 +47,9 @@ public class Player {
 
     public void decreaseHealth(int points) {
         health = health - points;
+    }
+    
+    public boolean isALive(){
+        return health > 0;
     }
 }

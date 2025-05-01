@@ -17,11 +17,7 @@ public class Monster {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public void setHealth(int health) {
+    private void setHealth(int health) {
         if (health > 100 || health < 0) {
             throw new IllegalArgumentException("Health must be between 0 and 100");
         }
@@ -38,5 +34,9 @@ public class Monster {
 
     public void decreaseHealth(int points) {
         health = health - points;
+    }
+
+    public boolean isALive(){
+        return health > 0;
     }
 }
