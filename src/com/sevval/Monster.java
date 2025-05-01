@@ -18,7 +18,7 @@ public class Monster {
     }
 
     private void setHealth(int health) {
-        if (health > 100 || health < 0) {
+        if (health > Game.FULL_HEALTH) {
             throw new IllegalArgumentException("Health must be between 0 and 100");
         }
         this.health = health;
@@ -29,7 +29,7 @@ public class Monster {
     }
 
     public void resetHealth() {
-        health = 100;
+        health = Game.FULL_HEALTH;
     }
 
     public void decreaseHealth(int points) {

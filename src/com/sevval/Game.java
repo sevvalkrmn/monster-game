@@ -3,6 +3,8 @@ package com.sevval;
 import java.util.Scanner;
 
 public class Game {
+    public static final int FULL_HEALTH = 100;
+
     private Player player;
     private Monster monster;
 
@@ -49,11 +51,11 @@ public class Game {
     private void buildPlayer(){
         String name = askName();
         int age = askAge();
-        player = new Player(name, 100, age);
+        player = new Player(name, FULL_HEALTH, age);
     } 
 
     private void buildMonster(){
-        monster = new Monster(100 , "Fatmik");
+        monster = new Monster(FULL_HEALTH , "Fatmik");
     }
 
     private String askName(){
